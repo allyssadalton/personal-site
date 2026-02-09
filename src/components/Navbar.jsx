@@ -1,0 +1,67 @@
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
+
+    const menuItems = [
+        { title: 'HOME', href: '#hero' },
+        { title: 'ABOUT', href: '#about' },
+        { title: 'PROJECTS', href: '#projects' },
+        { title: 'CONTACT', href: '#contact' },
+    ];
+
+    return (
+        <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center mix-blend-difference text-white">
+            <div className="text-2xl font-bold font-display tracking-tighter">
+                MV<span className="text-fluo">.</span>
+            </div>
+
+            <div className="hidden md:flex gap-8 font-display text-sm tracking-widest">
+                {menuItems.map((item) => (
+                    <a key={item.title} href={item.href} className="hover:text-fluo transition-colors duration-300">
+                        {item.title}
+                    </a>
+                ))}
+                <button className="bg-fluo text-black px-6 py-2 font-bold hover:bg-white transition-colors duration-300 transform skew-x-[-10deg]">
+                    <span className="block transform skew-x-[10deg]">HIRE ME</span>
+                </button>
+            </div>
+
+            <button onClick={toggleMenu} className="md:hidden z-50 relative">
+                {isOpen ? <X size={32} /> : <Menu size={32} />}
+            </button>
+
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: '-100%' }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: '-100%' }}
+                        transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
+                        className="fixed inset-0 bg-dark-bg flex flex-col items-center justify-center gap-8 md:hidden"
+                    >
+                        {menuItems.map((item, index) => (
+                            <motion.a
+                                key={item.title}
+                                href={item.href}
+                                onClick={toggleMenu}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.1 * index }}
+                                className="text-5xl font-display font-bold hover:text-fluo transition-colors"
+                            >
+                                {item.title}
+                            </motion.a>
+                        ))}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </nav>
+    );
+};
+
+export default Navbar;
