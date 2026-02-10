@@ -26,8 +26,8 @@ const Hero = () => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="font-display text-7xl md:text-9xl font-bold leading-none tracking-tighter"
                     >
-                    MARTIN<br />
-                    <span className="text-outline text-transparent stroke-white stroke-2">VIZCAINO</span>
+                    ALLYSSA<br />
+                    <span className="text-outline text-transparent stroke-white stroke-2">DALTON</span>
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -57,7 +57,7 @@ const Hero = () => {
                     <div className="w-[240px] md:w-[300px] lg:w-[360px] aspect-[3/4] overflow-hidden rounded-[10px] bg-dark-secondary/40 ring-2 ring-fluo/20 shadow-[0_10px_28px_rgba(0,0,0,0.35)]">
                         <img
                             src={headshot}
-                            alt="Martin Vizcaino – Software Engineer"
+                            alt="Allyssa Dalton - Data Engineering & Analytics"
                             width="360"
                             height="450"
                             loading="eager"
