@@ -24,8 +24,8 @@ const About = () => {
                     transition={{ duration: 0.6 }}
                     className="font-display text-5xl md:text-7xl font-bold mb-12"
                 >
-                    ENGINEER.<br />
-                    <span className="text-fluo">BUILDER.</span>
+                    ANALYST.<br />
+                    <span className="text-fluo">ENGINEER.</span>
                 </motion.h2>
 
                 <div className="grid md:grid-cols-2 gap-12 font-sans">
@@ -36,13 +36,13 @@ const About = () => {
                         transition={{ delay: 0.2, duration: 0.6 }}
                     >
                         <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                            Backend-focused software engineer with strong foundations in object-oriented programming
-                            and scalable system design. I specialize in building high-performance applications
-                            and developing large-scale data workflows in cloud environments.
+                            Computer Science student with a strong foundation in programming, data analysis, and system design.
+                            I focus on building data-driven applications, scalable backend systems, and efficient data workflows
+                            that turn raw data into meaningful insights.
                         </p>
                         <p className="text-gray-300 text-lg leading-relaxed">
-                            Passionate about engineering reliable enterprise AI systems that solve complex problems.
-                            Currently studying Computer Science at the University of Indianapolis (GPA 3.91).
+                            Passionate about data analytics, data engineering, and intelligent systems that solve real-world problems.
+                            Currently studying Computer Science at the University of Indianapolis (GPA 3.7).
                         </p>
                     </motion.div>
 
