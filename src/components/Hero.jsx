@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import headshot from '../assets/martin-vizcaino-headshot.jpeg';
+import headshot from '../assets/allyssa-dalton-headshot.jpeg';
 
 const Hero = () => {
     return (

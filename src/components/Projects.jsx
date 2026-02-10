@@ -3,22 +3,22 @@ import { motion } from 'framer-motion';
 
 const projects = [
     {
-        title: 'On-Device CSV Cleaner (iOS)',
-        stack: 'Swift, MLX, Core ML',
+        title: 'ETL Pipeline for Financial Loan Data ',
+        stack: 'Python',
         summary:
-            'Built an offline CSV cleaning tool using on-device AI for PII removal and privacy-compliant data prep.',
+            'Built an end-to-end ETL pipeline to ingest, transform, validate, and store loan data from multiple financial institutions.',
     },
     {
-        title: 'Sanctum — Chrome Privacy Filter',
+        title: 'KSPT Curriculum Map App',
         stack: 'TypeScript, Manifest V3',
         summary:
-            'Client-side Chrome extension that redacts PII before prompts are sent to ChatGPT, Claude, or Gemini.',
+            'Led a 6-person team to build an AI-assisted web application that automates curriculum alignment with accreditation standards using agile SCRUM practices.',
     },
     {
-        title: 'Real-Time Market Data Analysis',
+        title: 'Faculty Academy Events Management System ',
         stack: 'FastAPI, PostgreSQL, React',
         summary:
-            'Built a real-time stock data pipeline with REST APIs and an analytics dashboard for streaming insights.',
+            'Developed a full-stack academic event management platform with Google Calendar API integration, automated approval workflows, and live publishing tools.',
     },
 ];
 
