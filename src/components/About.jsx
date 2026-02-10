@@ -2,12 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const skills = [
-    "Java / Python / C++",
-    "FastAPI / Django",
-    "AWS / Docker / K8s",
-    "React / TypeScript",
-    "PostgreSQL / SQL",
-    "LLM Orchestration"
+    "Python · C · C++ · SQL · JavaScript · TypeScript · PHP",
+    "MySQL · Power BI · Azure Databricks · Azure DevOps",
+    "Microsoft 365 · Google Workspace · Balsamiq",
+    "HTML · CSS",
+    "Agile · Scrum · Six Sigma"
 ];
 
 const About = () => {
