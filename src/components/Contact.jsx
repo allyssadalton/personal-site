@@ -1,10 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin } from 'lucide-react';
+import { Mail, Linkedin, Github } from 'lucide-react';
 
 const Contact = () => {
-    const hireMeLink =
-        href="mailto:allyssadalton4@gmail.com?subject=Potential%20Opportunity%20&body=Hi%20Allyssa,%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20opportunity.%0ABest,%0A%5BName%5D"
+    const hireMeLink = "mailto:allyssadalton4@gmail.com?subject=Potential%20Opportunity%20&body=Hi%20Allyssa,%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20opportunity.%0ABest,%0A%5BName%5D"
 
     return (
         <section id="contact" className="py-20 px-6 md:px-20 bg-dark-bg text-white min-h-[60vh] flex items-center relative">
@@ -57,6 +56,15 @@ const Contact = () => {
                                 >
                                     <Linkedin className="mr-3 text-gray-500 group-hover:text-fluo" />
                                     /in/allyssadalton
+                                </a>
+                                 <a
+                                    href="https://www.github.com/allyssadalton/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center group text-lg font-display text-gray-300 hover:text-fluo transition-colors"
+                                >
+                                    <Github className="mr-3 text-gray-500 group-hover:text-fluo" />
+                                    /github/allyssadalton
                                 </a>
                             </div>
                         </div>
