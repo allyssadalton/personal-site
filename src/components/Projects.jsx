@@ -10,13 +10,13 @@ const projects = [
     },
     {
         title: 'KSPT Curriculum Map App',
-        stack: 'TypeScript, Manifest V3',
+        stack: 'Python, TypeScript, Svelte',
         summary:
             'Led a 6-person team to build an AI-assisted web application that automates curriculum alignment with accreditation standards using agile SCRUM practices.',
     },
     {
         title: 'Faculty Academy Events Management System ',
-        stack: 'FastAPI, PostgreSQL, React',
+        stack: 'FastAPI, PostgreSQL, Svelte',
         summary:
             'Developed a full-stack academic event management platform with Google Calendar API integration, automated approval workflows, and live publishing tools.',
     },
