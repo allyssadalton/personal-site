@@ -8,15 +8,8 @@ const projects = [
         year: "2025",
         desc: "Architected a production-grade multi-LLM routing system (FastAPI + Supabase) with dynamic model selection.",
         tags: ["FastAPI", "Supabase", "LLMs"],
+        liveLink: "https://www.studentaitoolkit.online",
         size: "large"
-    },
-    {
-        title: "CAPTE PLATFORM",
-        role: "Tech Lead",
-        year: "2025",
-        desc: "Led engineering for an enterprise accreditation platform. Designed an LLM mapping pipeline reducing prep time from hours to minutes.",
-        tags: ["Python", "Firebase", "Gemini"],
-        size: "large" // Changed to large for emphasis
     },
     {
         title: "HOOSIER RACING",
@@ -25,6 +18,23 @@ const projects = [
         desc: "Built a cross-platform inventory app tracking 5+ warehouses. Enabled real-time tracking with SQL & Flutter.",
         tags: ["Flutter", "SQL", "Mobile"],
         size: "small"
+    },
+    {
+        title: "Duolingo-Style Investing App (UI Prototype)",
+        role: "UI Prototype",
+        year: "2026",
+        desc: "Designed a gamified investing education UI prototype focused on retention mechanics and finance-specific micro-interactions.",
+        tagsText: "UI/UX · FinTech · Prototype",
+        liveLink: "https://jelly-swart-eta.vercel.app",
+        size: "large"
+    },
+    {
+        title: "CAPTE PLATFORM",
+        role: "Tech Lead",
+        year: "2025",
+        desc: "Led engineering for an enterprise accreditation platform. Designed an LLM mapping pipeline reducing prep time from hours to minutes.",
+        tags: ["Python", "Firebase", "Gemini"],
+        size: "large"
     },
     {
         title: "SANCTUM",
@@ -88,12 +98,30 @@ const Projects = () => {
                                 <p className="text-gray-400 font-sans text-sm md:text-base leading-relaxed mb-6">{project.desc}</p>
                             </div>
 
-                            <div className="flex flex-wrap gap-2">
-                                {project.tags.map((tag) => (
-                                    <span key={tag} className="px-3 py-1 border border-gray-700 rounded-full text-xs text-gray-400 font-mono group-hover:border-fluo group-hover:text-fluo transition-colors">
-                                        {tag}
-                                    </span>
-                                ))}
+                            <div className="flex flex-col gap-4">
+                                {project.tagsText ? (
+                                    <div className="text-gray-400 font-mono text-xs uppercase tracking-widest">
+                                        {project.tagsText}
+                                    </div>
+                                ) : (
+                                    <div className="flex flex-wrap gap-2">
+                                        {project.tags.map((tag) => (
+                                            <span key={tag} className="px-3 py-1 border border-gray-700 rounded-full text-xs text-gray-400 font-mono group-hover:border-fluo group-hover:text-fluo transition-colors">
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+                                {project.liveLink && (
+                                    <a
+                                        href={project.liveLink}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="inline-flex items-center justify-center px-5 py-3 border-2 border-fluo text-fluo font-mono text-xs uppercase tracking-widest hover:bg-fluo hover:text-dark-bg transition-colors duration-300"
+                                    >
+                                        Live Demo
+                                    </a>
+                                )}
                             </div>
                         </motion.div>
                     ))}
