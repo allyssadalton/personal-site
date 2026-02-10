@@ -33,6 +33,27 @@
   }
 }
 
+/* Mobile-specific adjustments */
+@media (max-width: 640px) {
+  #root {
+    padding: 1rem;
+    max-width: 100%;
+  }
+  .logo {
+    height: 4em;
+    padding: 0.75em;
+  }
+  .card {
+    padding: 1rem;
+  }
+  .logo:hover {
+    filter: none;
+  }
+  .read-the-docs {
+    font-size: 12px;
+  }
+}
+
 .card {
   padding: 2em;
 }
