@@ -24,7 +24,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <section id="projects" className="py-24 px-4 md:px-20 bg-dark-bg text-white">
+        <section id="projects" className="py-24 px-4 md:px-20 bg-soft-cream text-text-primary">
             <div className="max-w-7xl mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -43,16 +43,16 @@ const Projects = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="group relative bg-dark-secondary/40 p-7 md:p-8 border border-gray-800 hover:border-fluo transition-colors duration-500 rounded-none"
+                            className="group relative bg-card-white/40 p-7 md:p-8 border border-border-soft hover:border-sun-yellow transition-colors duration-500 rounded-none"
                         >
                             <div className="space-y-4">
-                                <h3 className="font-display text-2xl md:text-3xl font-bold group-hover:text-fluo transition-colors">
+                                <h3 className="font-display text-2xl md:text-3xl font-bold group-hover:text-sun-yellow transition-colors">
                                     {project.title}
                                 </h3>
-                                <div className="font-mono text-xs uppercase tracking-widest text-gray-400">
+                                <div className="font-mono text-xs uppercase tracking-widest text-text-muted">
                                     {project.stack}
                                 </div>
-                                <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+                                <p className="text-text-muted text-sm md:text-base leading-relaxed">
                                     {project.summary}
                                 </p>
                             </div>

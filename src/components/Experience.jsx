@@ -54,7 +54,7 @@ const experiences = [
 
 const Experience = () => {
     return (
-        <section id="experience" className="py-24 px-4 md:px-20 bg-dark-bg text-white">
+        <section id="experience" className="py-24 px-4 md:px-20 bg-soft-cream text-text-primary">
             <div className="max-w-7xl mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -82,27 +82,27 @@ const Experience = () => {
                                     href={exp.orgLink}
                                     target={exp.orgLink ? '_blank' : undefined}
                                     rel={exp.orgLink ? 'noreferrer' : undefined}
-                                    className={`group relative block border border-gray-800 bg-dark-secondary p-8 md:p-10 overflow-hidden transition-colors duration-300 ${
-                                        exp.orgLink
-                                            ? 'hover:border-fluo hover:bg-fluo hover:text-black cursor-pointer'
-                                            : ''
-                                    }`}
+                                    className={`group relative block border border-border-soft bg-card-white p-8 md:p-10 overflow-hidden transition-colors duration-300 ${
+                                            exp.orgLink
+                                                ? 'hover:border-sun-yellow hover:bg-sun-yellow hover:text-black cursor-pointer'
+                                                : ''
+                                        }`}
                                 >
-                                    <div className="absolute inset-x-0 top-0 h-1 bg-fluo opacity-20" />
+                                        <div className="absolute inset-x-0 top-0 h-1 bg-sun-yellow opacity-20" />
                                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                                         <div>
                                             <h3 className={`font-display text-2xl md:text-3xl font-bold ${hoverTextClass}`}>
                                                 {exp.title}
                                             </h3>
-                                            <p className={`text-light-text mt-1 ${hoverTextClass}`}>
+                                                <p className={`text-text-secondary mt-1 ${hoverTextClass}`}>
                                                 {exp.org}
                                             </p>
                                         </div>
-                                        <div className={`font-mono text-xs tracking-widest text-gray-400 uppercase ${hoverTextClass}`}>
+                                            <div className={`font-mono text-xs tracking-widest text-text-muted uppercase ${hoverTextClass}`}>
                                             {exp.dates}
                                         </div>
                                     </div>
-                                    <ul className={`list-disc pl-5 space-y-3 text-gray-300 text-sm md:text-base leading-relaxed ${hoverTextClass}`}>
+                                        <ul className={`list-disc pl-5 space-y-3 text-text-secondary text-sm md:text-base leading-relaxed ${hoverTextClass}`}>
                                         {exp.bullets.map((bullet) => (
                                             <li key={bullet}>{bullet}</li>
                                         ))}

@@ -12,7 +12,7 @@ const skills = [
 
 const About = () => {
     return (
-        <section id="about" className="py-20 px-6 md:px-20 bg-dark-bg text-white relative overflow-hidden">
+        <section id="about" className="py-20 px-6 md:px-20 bg-soft-cream text-text-primary relative overflow-hidden">
             {/* Decorative vertical line */}
             <div className="absolute left-6 md:left-20 top-0 bottom-0 w-[1px] bg-gray-800"></div>
 
@@ -25,7 +25,7 @@ const About = () => {
                     className="font-display text-5xl md:text-7xl font-bold mb-12"
                 >
                     ANALYST.<br />
-                    <span className="text-fluo">ENGINEER.</span>
+                    <span className="text-sun-yellow">ENGINEER.</span>
                 </motion.h2>
 
                 <div className="grid md:grid-cols-2 gap-12 font-sans">
@@ -35,12 +35,12 @@ const About = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.2, duration: 0.6 }}
                     >
-                        <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                        <p className="text-text-secondary text-lg leading-relaxed mb-6">
                             Computer Science student with a strong foundation in programming, data analysis, and system design.
                             I focus on building data-driven applications, scalable backend systems, and efficient data workflows
                             that turn raw data into meaningful insights.
                         </p>
-                        <p className="text-gray-300 text-lg leading-relaxed">
+                        <p className="text-text-secondary text-lg leading-relaxed">
                             Passionate about data analytics, data engineering, and intelligent systems that solve real-world problems.
                             Currently studying Computer Science at the University of Indianapolis (GPA 3.7).
                         </p>
@@ -52,12 +52,12 @@ const About = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.4, duration: 0.6 }}
                     >
-                        <h3 className="font-display text-xl mb-6 tracking-widest border-b border-gray-700 pb-2">CORE SKILLS</h3>
+                        <h3 className="font-display text-xl mb-6 tracking-widest border-b border-border-soft pb-2">CORE SKILLS</h3>
                         <div className="grid grid-cols-1 gap-4">
                             {skills.map((skill, index) => (
                                 <div key={index} className="flex items-center group">
-                                    <span className="w-2 h-2 bg-fluo mr-4 rounded-full group-hover:scale-150 transition-transform"></span>
-                                    <span className="text-lg group-hover:text-fluo transition-colors">{skill}</span>
+                                    <span className="w-2 h-2 bg-sun-yellow mr-4 rounded-full group-hover:scale-150 transition-transform"></span>
+                                    <span className="text-lg group-hover:text-sun-yellow transition-colors">{skill}</span>
                                 </div>
                             ))}
                         </div>

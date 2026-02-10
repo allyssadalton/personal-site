@@ -15,27 +15,27 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center mix-blend-difference text-white">
+        <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center text-text-primary">
             <div className="text-2xl font-bold font-display tracking-tighter">
-                MV<span className="text-fluo">.</span>
+                AD<span className="text-sun-yellow">.</span>
             </div>
 
             <div className="hidden md:flex gap-8 font-display text-sm tracking-widest">
                 {menuItems.map((item) => (
-                    <a key={item.title} href={item.href} className="hover:text-fluo transition-colors duration-300">
+                    <a key={item.title} href={item.href} className="hover:text-sun-yellow transition-colors duration-300">
                         {item.title}
                     </a>
                 ))}
                 <a
                     href="/AllyssaDalton_Resume.pdf"
                     download
-                    className="hover:text-fluo transition-colors duration-300"
+                    className="hover:text-sun-yellow transition-colors duration-300"
                 >
                     RESUME
                 </a>
                 <a
                     href="mailto:allyssadalton4@gmail.com?subject=Potential%20Opportunity%20&body=Hi%20Allyssa,%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20opportunity.%0ABest,%0A%5BName%5D"
-                    className="bg-fluo text-black px-6 py-2 font-bold hover:bg-white transition-colors duration-300 transform skew-x-[-10deg]"
+                    className="bg-sun-yellow text-black px-6 py-2 font-bold hover:bg-white transition-colors duration-300 transform skew-x-[-10deg]"
                 >
                     <span className="block transform skew-x-[10deg]">HIRE ME</span>
                 </a>
@@ -52,7 +52,7 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: '-100%' }}
                         transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
-                        className="fixed inset-0 bg-dark-bg flex flex-col items-center justify-center gap-8 md:hidden"
+                        className="fixed inset-0 bg-soft-cream flex flex-col items-center justify-center gap-8 md:hidden"
                     >
                         {menuItems.map((item, index) => (
                             <motion.a
@@ -62,7 +62,7 @@ const Navbar = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.1 * index }}
-                                className="text-5xl font-display font-bold hover:text-fluo transition-colors"
+                                className="text-5xl font-display font-bold hover:text-sun-yellow transition-colors"
                             >
                                 {item.title}
                             </motion.a>
@@ -70,7 +70,7 @@ const Navbar = () => {
                         <a
                             href="/AllyssaDalton_Resume.pdf"
                             download
-                            className="text-5xl font-display font-bold hover:text-fluo transition-colors"
+                            className="text-5xl font-display font-bold hover:text-sun-yellow transition-colors"
                         >
                             RESUME
                         </a>
