@@ -26,9 +26,19 @@ const Navbar = () => {
                         {item.title}
                     </a>
                 ))}
-                <button className="bg-fluo text-black px-6 py-2 font-bold hover:bg-white transition-colors duration-300 transform skew-x-[-10deg]">
+                <a
+                    href="/Martin_Vizcaino_Resume_2026.pdf"
+                    download
+                    className="hover:text-fluo transition-colors duration-300"
+                >
+                    RESUME
+                </a>
+                <a
+                    href="mailto:vizcainom@uindy.edu?subject=Software%20Engineering%20Opportunity&body=Hi%20Martin,%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20opportunity.%0ABest,%0A%5BName%5D"
+                    className="bg-fluo text-black px-6 py-2 font-bold hover:bg-white transition-colors duration-300 transform skew-x-[-10deg]"
+                >
                     <span className="block transform skew-x-[10deg]">HIRE ME</span>
-                </button>
+                </a>
             </div>
 
             <button onClick={toggleMenu} className="md:hidden z-50 relative">
@@ -57,6 +67,13 @@ const Navbar = () => {
                                 {item.title}
                             </motion.a>
                         ))}
+                        <a
+                            href="/Martin_Vizcaino_Resume_2026.pdf"
+                            download
+                            className="text-5xl font-display font-bold hover:text-fluo transition-colors"
+                        >
+                            RESUME
+                        </a>
                     </motion.div>
                 )}
             </AnimatePresence>

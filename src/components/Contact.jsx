@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Phone } from 'lucide-react';
+import { Mail, Linkedin } from 'lucide-react';
 
 const Contact = () => {
+    const hireMeLink =
+        'mailto:vizcainom@uindy.edu?subject=Software%20Engineering%20Opportunity&body=Hi%20Martin,%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20opportunity.%0ABest,%0A%5BName%5D';
+
     return (
         <section id="contact" className="py-20 px-6 md:px-20 bg-dark-bg text-white min-h-[60vh] flex items-center relative">
             <div className="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-t from-fluo/5 to-transparent pointer-events-none"></div>
@@ -27,22 +30,34 @@ const Contact = () => {
                         className="flex flex-col justify-center space-y-8"
                     >
                         <p className="text-xl text-gray-300">
-                            I'm always open to discussing new projects, opportunities,
-                            or just chatting about backend systems and AI.
+                            Open to software engineering opportunities and focused collaborations.
                         </p>
 
-                        <div className="space-y-6">
-                            <a href="mailto:vizcainom@uindy.edu" className="flex items-center group text-2xl font-display hover:text-fluo transition-colors">
-                                <Mail className="mr-4 text-gray-500 group-hover:text-fluo" />
-                                vizcainom@uindy.edu
+                        <div className="flex flex-col gap-4">
+                            <a
+                                href={hireMeLink}
+                                className="inline-flex items-center justify-center px-6 py-3 border-2 border-fluo text-black bg-fluo font-mono text-xs uppercase tracking-widest hover:bg-transparent hover:text-fluo transition-colors duration-300 w-fit"
+                            >
+                                Hire Me
                             </a>
-                            <a href="https://www.linkedin.com/in/martinvizcaino/" target="_blank" rel="noopener noreferrer" className="flex items-center group text-2xl font-display hover:text-fluo transition-colors">
-                                <Linkedin className="mr-4 text-gray-500 group-hover:text-fluo" />
-                                /in/martinvizcaino
-                            </a>
-                            <div className="flex items-center group text-2xl font-display text-gray-400">
-                                <Phone className="mr-4 text-gray-500" />
-                                (872) 319-3251
+
+                            <div className="space-y-4">
+                                <a
+                                    href="mailto:vizcainom@uindy.edu"
+                                    className="flex items-center group text-lg font-display text-gray-300 hover:text-fluo transition-colors"
+                                >
+                                    <Mail className="mr-3 text-gray-500 group-hover:text-fluo" />
+                                    vizcainom@uindy.edu
+                                </a>
+                                <a
+                                    href="https://www.linkedin.com/in/martinvizcaino/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center group text-lg font-display text-gray-300 hover:text-fluo transition-colors"
+                                >
+                                    <Linkedin className="mr-3 text-gray-500 group-hover:text-fluo" />
+                                    /in/martinvizcaino
+                                </a>
                             </div>
                         </div>
                     </motion.div>
