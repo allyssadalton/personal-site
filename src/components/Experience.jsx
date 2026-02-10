@@ -5,6 +5,7 @@ const experiences = [
     {
         title: 'Co-Founder & Backend Systems Engineer',
         org: 'Carrot',
+        orgLink: 'https://www.studentaitoolkit.online',
         dates: 'Nov 2025 - Present',
         bullets: [
             'Architected a production-grade multi-LLM routing system (FastAPI, Supabase, pgvector) with dynamic model selection and provider fallback.',
@@ -83,34 +84,51 @@ const Experience = () => {
                 </motion.h2>
 
                 <div className="space-y-8">
-                    {experiences.map((exp, index) => (
-                        <motion.div
-                            key={exp.title}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.08 }}
-                            className="relative border border-gray-800 bg-dark-secondary p-8 md:p-10 overflow-hidden"
-                        >
-                            <div className="absolute inset-x-0 top-0 h-1 bg-fluo opacity-20" />
-                            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
-                                <div>
-                                    <h3 className="font-display text-2xl md:text-3xl font-bold">
-                                        {exp.title}
-                                    </h3>
-                                    <p className="text-light-text mt-1">{exp.org}</p>
-                                </div>
-                                <div className="font-mono text-xs tracking-widest text-gray-400 uppercase">
-                                    {exp.dates}
-                                </div>
-                            </div>
-                            <ul className="list-disc pl-5 space-y-3 text-gray-300 text-sm md:text-base leading-relaxed">
-                                {exp.bullets.map((bullet) => (
-                                    <li key={bullet}>{bullet}</li>
-                                ))}
-                            </ul>
-                        </motion.div>
-                    ))}
+                    {experiences.map((exp, index) => {
+                        const CardTag = exp.orgLink ? 'a' : 'div';
+                        const hoverTextClass = exp.orgLink ? 'group-hover:text-black transition-colors' : '';
+
+                        return (
+                            <motion.div
+                                key={exp.title}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.08 }}
+                            >
+                                <CardTag
+                                    href={exp.orgLink}
+                                    target={exp.orgLink ? '_blank' : undefined}
+                                    rel={exp.orgLink ? 'noreferrer' : undefined}
+                                    className={`group relative block border border-gray-800 bg-dark-secondary p-8 md:p-10 overflow-hidden transition-colors duration-300 ${
+                                        exp.orgLink
+                                            ? 'hover:border-fluo hover:bg-fluo hover:text-black cursor-pointer'
+                                            : ''
+                                    }`}
+                                >
+                                    <div className="absolute inset-x-0 top-0 h-1 bg-fluo opacity-20" />
+                                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+                                        <div>
+                                            <h3 className={`font-display text-2xl md:text-3xl font-bold ${hoverTextClass}`}>
+                                                {exp.title}
+                                            </h3>
+                                            <p className={`text-light-text mt-1 ${hoverTextClass}`}>
+                                                {exp.org}
+                                            </p>
+                                        </div>
+                                        <div className={`font-mono text-xs tracking-widest text-gray-400 uppercase ${hoverTextClass}`}>
+                                            {exp.dates}
+                                        </div>
+                                    </div>
+                                    <ul className={`list-disc pl-5 space-y-3 text-gray-300 text-sm md:text-base leading-relaxed ${hoverTextClass}`}>
+                                        {exp.bullets.map((bullet) => (
+                                            <li key={bullet}>{bullet}</li>
+                                        ))}
+                                    </ul>
+                                </CardTag>
+                            </motion.div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
