@@ -4,7 +4,7 @@ import { Mail, Linkedin } from 'lucide-react';
 
 const Contact = () => {
     const hireMeLink =
-        'mailto:vizcainom@uindy.edu?subject=Software%20Engineering%20Opportunity&body=Hi%20Martin,%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20opportunity.%0ABest,%0A%5BName%5D';
+        href="mailto:allyssadalton4@gmail.com?subject=Potential%20Opportunity%20&body=Hi%20Allyssa,%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20opportunity.%0ABest,%0A%5BName%5D"
 
     return (
         <section id="contact" className="py-20 px-6 md:px-20 bg-dark-bg text-white min-h-[60vh] flex items-center relative">
@@ -19,7 +19,7 @@ const Contact = () => {
                     >
                         <h2 className="font-display text-6xl md:text-8xl font-bold leading-tight mb-8">
                             LET'S<br />
-                            <span className="text-fluo">TALK</span>
+                            <span className="text-fluo">CHAT</span>
                         </h2>
                     </motion.div>
 
@@ -30,7 +30,7 @@ const Contact = () => {
                         className="flex flex-col justify-center space-y-8"
                     >
                         <p className="text-xl text-gray-300">
-                            Open to software engineering opportunities and focused collaborations.
+                            Open to data analytics and data engineering opportunities.
                         </p>
 
                         <div className="flex flex-col gap-4">
@@ -43,20 +43,20 @@ const Contact = () => {
 
                             <div className="space-y-4">
                                 <a
-                                    href="mailto:vizcainom@uindy.edu"
+                                    href="mailto:allyssadalton4@gmail.com"
                                     className="flex items-center group text-lg font-display text-gray-300 hover:text-fluo transition-colors"
                                 >
                                     <Mail className="mr-3 text-gray-500 group-hover:text-fluo" />
-                                    vizcainom@uindy.edu
+                                    allyssadalton4@gmail.com
                                 </a>
                                 <a
-                                    href="https://www.linkedin.com/in/martinvizcaino/"
+                                    href="https://www.linkedin.com/in/allyssadalton/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center group text-lg font-display text-gray-300 hover:text-fluo transition-colors"
                                 >
                                     <Linkedin className="mr-3 text-gray-500 group-hover:text-fluo" />
-                                    /in/martinvizcaino
+                                    /in/allyssadalton
                                 </a>
                             </div>
                         </div>
