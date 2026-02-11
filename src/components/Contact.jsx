@@ -49,7 +49,7 @@ const Contact = () => {
                                     allyssadalton4@gmail.com
                                 </a>
                                 <a
-                                    href="https://www.linkedin.com/in/allyssadalton/"
+                                    href="https://www.linkedin.com/in/allyssa-dalton/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center group text-lg font-display text-text-secondary hover:text-sun-yellow transition-colors"
