@@ -28,7 +28,8 @@ const Navbar = () => {
                 ))}
                 <a
                     href="/AllyssaDalton_Resume.pdf"
-                    download
+                    type="application/pdf"
+                    download="AllyssaDalton_Resume.pdf"
                     className="hover:text-sun-yellow transition-colors duration-300"
                 >
                     RESUME
@@ -69,7 +70,8 @@ const Navbar = () => {
                         ))}
                         <a
                             href="/AllyssaDalton_Resume.pdf"
-                            download
+                            type="application/pdf"
+                            download="AllyssaDalton_Resume.pdf"
                             className="text-5xl font-display font-bold hover:text-sun-yellow transition-colors"
                         >
                             RESUME
